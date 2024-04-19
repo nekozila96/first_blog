@@ -1,4 +1,4 @@
-cd /var/jenkins_home/workspace/Django
+cd /var/lib/jenkins/workspace/Django/scripts
 if [-d "my_env"]
 then
 	echo "Python virtual env exists"
