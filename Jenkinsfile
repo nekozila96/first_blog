@@ -3,7 +3,7 @@ pipeline{
     stages {
  	   
         
-        stages('Setup Python Virtual ENV'){
+        stage('Setup Python Virtual ENV'){
 	    steps  {
                sh '''
 		cd scripts/
