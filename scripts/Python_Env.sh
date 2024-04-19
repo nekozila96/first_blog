@@ -9,7 +9,7 @@ fi
 echo $PWD
 
 source my_env/bin/activate
-
+cd /var/lib/jenkins/workspace/Django
 python -m pip install requirements.txt
 
 echo "Python Env finishes"
