@@ -6,7 +6,6 @@ pipeline{
         stage('Setup Python Virtual ENV'){
 	    steps  {
                sh '''
-		cd scripts/
                chmod +x Python_Env.sh
                ./Python_Env.sh
                '''
@@ -15,7 +14,6 @@ pipeline{
         stage('Setup Gunicorn Setup'){
             steps {
                 sh '''
-		cd scripts/
                 chmod +x gunicorn.sh
                 ./gunicorn.sh
                 '''
