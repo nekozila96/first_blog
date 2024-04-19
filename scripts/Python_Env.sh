@@ -1,4 +1,4 @@
-cd /var/lib/jenkins/workspace/Django/scripts
+
 if [-d "my_env"]
 then
 	echo "Python virtual env exists"
@@ -9,7 +9,7 @@ fi
 echo $PWD
 
 source my_env/bin/activate
-cd /var/lib/jenkins/workspace/Django
+cd /var/lib/jenkins/workspace/Django/scripts
 python -m pip install requirements.txt
 
 echo "Python Env finishes"
