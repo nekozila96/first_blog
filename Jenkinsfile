@@ -6,6 +6,7 @@ pipeline{
         stage('Setup Python Virtual ENV'){
 	    steps  {
                sh '''
+               cd /var/jenkins_home/workspace/Django/scripts
                chmod +x Python_Env.sh
                ./Python_Env.sh
                '''
