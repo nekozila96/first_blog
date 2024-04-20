@@ -10,7 +10,6 @@ echo $PWD
 
 source my_env/bin/activate
 
-python -m pip install requirements.txt
 
 echo "Python Env finishes"
 

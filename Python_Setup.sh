@@ -4,8 +4,8 @@ python --version
 yum -y update
 yum -y install yum-utils
 yum -y groupinstall development 
-yum -y install gcc openssl-devel bzip2-devel libffi-devel
-
+yum -y install gcc openssl-devel bzip2-devel libffi-devel sqlite-devel python-pip libsqlite3-dev
+yum -y install policycoreutils policycoreutils-python selinux-policy
 #Install Python 3.X.X
 cd /usr/src
 wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
