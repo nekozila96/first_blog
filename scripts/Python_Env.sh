@@ -7,12 +7,11 @@ else
 fi
 
 echo $PWD
-
+cd /var/lib/jenkins/workspace/Django
 source my_env/bin/activate
 
-
-cd /var/lib/jenkins/workspace/Django/scripts
-python -m pip install requirements.txt
+python -m pip install django==2.0
+python -m pip install gunicorn
 
 
 echo "Python Env finishes"

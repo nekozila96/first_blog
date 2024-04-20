@@ -1,3 +1,4 @@
+
 sudo cp -rf nginx.repo /etc/yum.repos.d
 yum -y install nginx
 
@@ -13,5 +14,3 @@ echo "Gunicorn has been started"
 
 sudo systemctl status nginx
 
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
-sed -i 's/SELINUX=enforcing/SELINUX=disabled/g'  /etc/selinux/config
