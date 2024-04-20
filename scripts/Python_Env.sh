@@ -3,7 +3,7 @@ if [-d "my_env"]
 then
 	echo "Python virtual env exists"
 else
-	python -m venv my_env
+	sudo python -m venv my_env
 fi
 
 echo $PWD
