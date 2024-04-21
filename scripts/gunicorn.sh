@@ -1,3 +1,5 @@
+sudo cp -rf nginx.repo /etc/yum.repos.d
+yum -y install nginx
 sudo cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
