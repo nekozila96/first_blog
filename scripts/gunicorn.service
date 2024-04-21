@@ -5,11 +5,11 @@ After=network.target
 [Service]
 User=root
 Group=nginx
-WorkingDirectory=/home/kun/projects/first_blog
-ExecStart=/home/kun/projects/first_blog/my_env/bin/gunicorn \
+WorkingDirectory=/var/lib/jenkins/workspace/Django
+ExecStart=/var/lib/jenkins/workspace/Django/bin/gunicorn \
 	--access-logfile - \
 	--workers 3 \
-	--bind unix:/home/kun/projects/first_blog/mysite_3.sock \
+	--bind unix:/var/lib/jenkins/workspace/Django/mysite_3.sock \
 	mysite_3.wsgi:application
 
 [Install]
