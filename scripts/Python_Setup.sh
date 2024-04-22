@@ -16,8 +16,7 @@ sudo tar xzf Python-3.7.3.tgz
 cd Python-3.7.3
 ./configure --enable-loadable-sqlite-extensions && make && sudo make install
 which python3.7
-echo "alias python='python3'" >> ~/.bash_profile
-source ~/.bash_profile
+
 
 python --version
 sudo yum install -y java-11-openjdk-devel
