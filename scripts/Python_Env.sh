@@ -4,7 +4,7 @@ source ~/.bash_profile
 cd /var/lib/jenkins/workspace/Django
 python --version
 if [ -d "my_env" ]; then
-    echo "Thư mục tồn tại."
+    echo "Existted folder !"
 else
     python -m venv my_env
 fi
