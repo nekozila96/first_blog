@@ -1,3 +1,4 @@
+#!bin/bash
 python --version
 
 #Install and Update Yum
@@ -18,4 +19,6 @@ which python3.7
 echo "alias python='python3'" >> ~/.bash_profile
 source ~/.bash_profile
 
-
+python --version
+sudo yum install -y java-11-openjdk-devel
+sudo yum install -y jenkins--nogpgcheck
