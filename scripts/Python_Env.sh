@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo $PWD
-
+cd /var/lib/jenkins/workspace/Django
 
 source my_env/bin/activate
 python -m pip install --upgrade pip
