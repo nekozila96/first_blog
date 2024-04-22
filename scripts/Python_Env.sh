@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "alias python=/usr/local/bin/python3.7" >> ~/.bash_profile
 source ~/.bash_profile
 cd /var/lib/jenkins/workspace/Django
 python --version
