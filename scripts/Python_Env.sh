@@ -1,6 +1,6 @@
-#!/usr/local/bin/python3.7
+#!/bin/bash
 
-
+source ~/.bash_profile
 cd /var/lib/jenkins/workspace/Django
 python --version
 if [ -d "my_env" ]; then
