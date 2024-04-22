@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3.7
 
-echo $PWD
+
 cd /var/lib/jenkins/workspace/Django
 python --version
 if [ -d "my_env" ]; then
