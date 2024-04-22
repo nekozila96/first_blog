@@ -2,7 +2,7 @@
 
 echo $PWD
 cd /var/lib/jenkins/workspace/Django
-
+python --version
 source my_env/bin/activate
 python -m pip install --upgrade pip
 python -m pip install django==2.0
