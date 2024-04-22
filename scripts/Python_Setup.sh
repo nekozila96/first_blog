@@ -25,3 +25,5 @@ curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | 
 sudo yum install -y jenkins--nogpgcheck
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
+sudo firewall-cmd --reload
