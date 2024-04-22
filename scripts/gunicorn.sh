@@ -1,8 +1,8 @@
 
 #!bin/bash
-sudo visudo jenkins ALL=(ALL) NOPASSWD: ALL
-sudo cp -rf nginx.repo /etc/yum.repos.d
-yum -y install nginx
+
+sudo su - jenkins cp -rf nginx.repo /etc/yum.repos.d
+sudo yum -y install nginx
 sudo cp -rf gunicorn.service /etc/systemd/system
 usermod -a -G nginx root
 
