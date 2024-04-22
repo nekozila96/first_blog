@@ -21,4 +21,7 @@ source ~/.bash_profile
 
 python --version
 sudo yum install -y java-11-openjdk-devel
+curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
 sudo yum install -y jenkins--nogpgcheck
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
