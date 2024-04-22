@@ -6,7 +6,6 @@ pipeline{
 	    steps  {
                sh '''
 	        cd /var/lib/jenkins/workspace/Django/scripts
-               chmod +x Python_Env.sh
                ./Python_Env.sh
                '''
 	    }
@@ -15,7 +14,6 @@ pipeline{
             steps {
                 sh '''
 		cd /var/lib/jenkins/workspace/Django/scripts
-                chmod +x gunicorn.sh
                 ./gunicorn.sh
                 '''
             }
@@ -24,7 +22,6 @@ pipeline{
             steps {
                 sh '''
 		cd /var/lib/jenkins/workspace/Django/scripts
-                chmod +x nginx.sh
                 ./nginx.sh
                 '''
             }
