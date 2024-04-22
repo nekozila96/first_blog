@@ -1,6 +1,9 @@
+
+#!bin/bash
 sudo cp -rf nginx.repo /etc/yum.repos.d
 yum -y install nginx
 sudo cp -rf gunicorn.service /etc/systemd/system
+usermod -a -G nginx root
 
 echo "$USER"
 echo "$PWD"
