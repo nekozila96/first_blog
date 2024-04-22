@@ -9,7 +9,7 @@ else
     python -m venv my_env
 fi
 source my_env/bin/activate
-python -m pip install --upgrade pip
+pip3 install --upgrade pip
 python -m pip install django==2.0
 python -m pip install gunicorn
 
