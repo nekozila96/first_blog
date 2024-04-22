@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 echo $PWD
 cd /var/lib/jenkins/workspace/Django
