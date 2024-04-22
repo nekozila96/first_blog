@@ -6,6 +6,8 @@ sudo yum -y install yum-utils
 sudo yum -y groupinstall development 
 sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel sqlite-devel python-pip libsqlite3-dev
 sudo yum -y install policycoreutils policycoreutils-python selinux-policy
+sudo cp -rf nginx.repo /etc/yum.repos.d
+sudo yum -y install nginx
 #Install Python 3.X.X
 cd /usr/src
 sudo wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
