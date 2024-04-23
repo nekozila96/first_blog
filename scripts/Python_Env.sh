@@ -1,4 +1,4 @@
-#!/var/lib/jenkins/.pyenv/shims/python3.6
+
 #!/bin/bash
 cd /var/lib/jenkins/workspace/Django
 python --version
