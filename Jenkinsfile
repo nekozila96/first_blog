@@ -11,15 +11,7 @@ pipeline{
                '''
 	    }
         }
-        stage('Setup Gunicorn Setup'){
-            steps {
-                sh '''
-		cd /var/lib/jenkins/workspace/Django/scripts
-  		chmod +x gunicorn.sh
-                ./gunicorn.sh
-                '''
-            }
-        }
+
         stage('setup NGINX'){
             steps {
                 sh '''
