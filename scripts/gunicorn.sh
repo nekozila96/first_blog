@@ -1,5 +1,5 @@
 
-#!bin/bash
+#!/bin/bash
 
 sudo cp -rf nginx.repo /etc/yum.repos.d
 sudo yum -y install nginx
