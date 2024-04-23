@@ -8,10 +8,10 @@ sudo cp -rf gunicorn.service /etc/systemd/system
 
 echo "$USER"
 echo "$PWD"
-systemctl start gunicorn.service
-systemctl daemon-reload
-systemctl start gunicorn
-systemctl enable gunicorn
+sudo systemctl start gunicorn.service
+sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
 
 echo "Gunicorn has been started"
 
