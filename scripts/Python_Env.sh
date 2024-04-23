@@ -2,18 +2,18 @@
 #!/bin/bash
 cd /var/lib/jenkins/workspace/Django
 python --version
-python3 -m pip install virtualenv
-python3 -m venv my_env
+python -m pip install virtualenv
+python -m venv my_env
 source my_env/bin/activate
-pip3 install --upgrade pip
-python3 install django==2.0 
-python3 install gunicorn 
+pip install --upgrade pip
+python install django==2.0 
+python install gunicorn 
 
 
 echo "Python Env finishes"
 
-python3 manage.py makemigrations
-python3 manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 
 echo "Migrations done"
 deactivate
