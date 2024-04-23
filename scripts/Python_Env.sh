@@ -8,8 +8,8 @@ else
 fi
 source ./my_env/bin/activate
 pip install --upgrade pip
-python3 -m pip install django==2.0 --jenkins
-python3 -m pip install gunicorn --jenkins
+pip3 install django==2.0 --jenkins
+pip3 install gunicorn --jenkins
 
 
 echo "Python Env finishes"
