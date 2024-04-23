@@ -9,5 +9,7 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nf
 source $HOME/.bashrc
 pyenv --version
 pyenv install 3.6.5
+pyenv global
 pyenv global 3.6.5
 pyenv global
+python --version
