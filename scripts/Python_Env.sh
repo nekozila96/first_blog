@@ -41,9 +41,8 @@ sudo cp -rf gunicorn.service /etc/systemd/system
 chmod +x gunicorn.service
 
 echo "$USER"
-
-sudo systemctl start gunicorn.service
 sudo systemctl daemon-reload
+sudo systemctl start gunicorn.service
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 
