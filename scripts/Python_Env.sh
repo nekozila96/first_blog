@@ -2,7 +2,7 @@
 #!/bin/bash
 cd /var/lib/jenkins/workspace/Django
 python --version
-python -m pip install virtualenv
+
 python -m venv my_env
 source my_env/bin/activate
 pip install --upgrade pip
