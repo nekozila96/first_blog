@@ -15,13 +15,13 @@ pyenv global
 python --version
 
 cd /var/lib/jenkins/workspace/Django
-python --version
-
-python3 -m venv my_env
+python3 -m pip install --upgrade pip
+pip3 install virtualenv
+virtualenv my_env
 source my_env/bin/activate
-pip3 install --upgrade pip
-python3 install django==2.0 
-python3 install gunicorn 
+
+python3 -m pip install django==2.0 
+python3 -m pip install gunicorn 
 
 
 echo "Python Env finishes"
