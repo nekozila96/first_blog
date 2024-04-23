@@ -34,10 +34,9 @@ deactivate
 
 python --version
 python -m gunicorn --version
-
+cd /var/lib/jenkins/workspace/Django/scripts
 sudo cp -rf nginx.repo /etc/yum.repos.d
 sudo yum -y install nginx
-cd /var/lib/jenkins/workspace/Django/scripts
 sudo cp -rf gunicorn.service /etc/systemd/system
 chmod +x gunicorn.service
 
