@@ -17,4 +17,4 @@ sudo systemctl enable gunicorn
 
 echo "Gunicorn has been started"
 
-systemctl status gunicorn
+sudo systemctl status gunicorn
