@@ -8,14 +8,14 @@ else
 fi
 source my_env/bin/activate
 pip3 install --upgrade pip
-python -m pip install django==2.0
-python -m pip install gunicorn
+python3 -m pip install django==2.0
+python3 -m pip install gunicorn
 
 
 echo "Python Env finishes"
 
-python manage.py makemigrations
-python manage.py migrate
+python3 manage.py makemigrations
+python3 manage.py migrate
 
 echo "Migrations done"
 deactivate
