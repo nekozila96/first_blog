@@ -8,7 +8,7 @@ else
 fi
 source my_env/bin/activate
 pip3 install --upgrade pip
-pip3 -m pip install django==2.0
+pip3 install django==2.0
 pip3 -m pip install gunicorn
 
 
