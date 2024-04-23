@@ -7,9 +7,9 @@ else
     python3 -m venv my_env
 fi
 source ./my_env/bin/activate
-pip3 install --upgrade pip
-python3 -m pip3 install django==2.0
-python3 -m pip3 install gunicorn
+pip install --upgrade pip
+python3 -m pip install django==2.0
+python3 -m pip install gunicorn
 
 
 echo "Python Env finishes"
