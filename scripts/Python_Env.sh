@@ -38,7 +38,7 @@ python -m gunicorn --version
 sudo cp -rf nginx.repo /etc/yum.repos.d
 sudo yum -y install nginx
 sudo cp -rf gunicorn.service /etc/systemd/system
-
+ls /var/lib/jenkins/workspace/Django/my_env/bin
 
 echo "$USER"
 echo "$PWD"
