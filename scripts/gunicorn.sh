@@ -1,18 +1,18 @@
 
 #!bin/bash
 
-sudo su - jenkins cp -rf nginx.repo /etc/yum.repos.d
-sudo yum -y install nginx
-sudo cp -rf gunicorn.service /etc/systemd/system
+sudo -n cp -rf nginx.repo /etc/yum.repos.d
+sudo -n yum -y install nginx
+sudo -n cp -rf gunicorn.service /etc/systemd/system
 usermod -a -G nginx root
 
 echo "$USER"
 echo "$PWD"
-sudo systemctl start gunicorn.service
-sudo systemctl daemon-reload
-sudo systemctl start gunicorn
-sudo systemctl enable gunicorn
+sudo -n systemctl start gunicorn.service
+sudo -n systemctl daemon-reload
+sudo -n systemctl start gunicorn
+sudo -n systemctl enable gunicorn
 
 echo "Gunicorn has been started"
 
-sudo systemctl status gunicorn
+sudo -n systemctl status gunicorn
