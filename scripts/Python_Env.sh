@@ -66,6 +66,7 @@ nginx -t
 sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
 touch /var/run/nginx.pid
 sudo chown -R nginx:nginx /var/run/nginx.pid
+deactivate
 sudo systemctl daemon-reload
 sudo systemctl start nginx
 sudo systemctl enable nginx
@@ -73,4 +74,4 @@ sudo systemctl status nginx
 
 echo "Nginx has been started"
 
-deactivate
+
