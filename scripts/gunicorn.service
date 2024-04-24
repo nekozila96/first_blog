@@ -6,7 +6,7 @@ After=network.target
 User=jenkins
 Group=nginx
 WorkingDirectory=/var/lib/jenkins/workspace/Django
-ExecStart=/var/lib/jenkins/workspace/Django/my_env/bin/gunicorn \
+ExecStart=/var/lib/jenkins/.pyenv/shims/gunicorn \
 	--access-logfile - \
 	--workers 3 \
 	--bind unix:/var/lib/jenkins/workspace/Django/mysite_3.sock \
