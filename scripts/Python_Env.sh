@@ -72,7 +72,5 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 
 echo "Nginx has been started"
-sudo yum install -y policycoreutils-python
-sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
-sudo semodule -i mynginx.pp
+
 deactivate
