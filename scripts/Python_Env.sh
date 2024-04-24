@@ -38,6 +38,7 @@ cd /var/lib/jenkins/workspace/Django/scripts
 sudo cp -rf nginx.repo /etc/yum.repos.d
 sudo yum -y install nginx
 chmod 777 -R /var/lib/jenkins/workspace/Django/scripts
+sudo usermod -a -G nginx root
 sudo cp -rf gunicorn.service /etc/systemd/system
 chmod +x gunicorn.service
 
