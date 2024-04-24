@@ -12,15 +12,7 @@ pipeline{
 	    }
         }
 
-        stage('setup NGINX'){
-            steps {
-                sh '''
-		cd /var/lib/jenkins/workspace/Django/scripts
-  		chmod +x nginx.sh
-                ./nginx.sh
-                '''
-            }
-        }
+       
     }
 }
 
