@@ -64,7 +64,7 @@ setsebool -P httpd_can_network_connect 1
 setsebool -P httpd_can_network_relay 1
 sudo nginx -t
 sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
-chown -R nginx:nginx /var/run/nginx.pid
+sudo chown -R nginx:nginx /var/run/nginx.pid
 
 sudo systemctl start nginx
 sudo systemctl enable nginx
