@@ -69,7 +69,8 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 
-echo "Gunicorn has been started"
+chown -R nginx:nginx /var/run/nginx.pid
+echo "Nginx has been started"
 
 
 deactivate
