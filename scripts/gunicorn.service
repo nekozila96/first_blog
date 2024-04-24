@@ -3,7 +3,7 @@ Description=gunicorn daemon
 After=network.target
 
 [Service]
-User=root
+User=jenkins
 Group=nginx
 WorkingDirectory=/var/lib/jenkins/workspace/Django
 ExecStart=/var/lib/jenkins/workspace/Django/my_env/bin/gunicorn \
