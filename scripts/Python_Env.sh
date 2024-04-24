@@ -49,6 +49,10 @@ sudo systemctl start gunicorn.service
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 
-echo "Gunicorn has been started"
+
 
 sudo systemctl status gunicorn
+echo "Gunicorn has been started"
+
+
+deactivate
