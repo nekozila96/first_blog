@@ -1,5 +1,6 @@
 
 #!/bin/bash
+# Step 1: Install Python 3
 sudo yum update -y
 sudo yum -y install git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel
 git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
@@ -14,24 +15,23 @@ pyenv global 3.6.5
 pyenv global
 python --version
 
+# Step 2: Create Virtual Environment, install dependencies
 cd /var/lib/jenkins/workspace/Django
 python3 -m pip install --upgrade pip
 pip3 install virtualenv
 virtualenv my_env
 source my_env/bin/activate
-
 python3 -m pip install django==2.0 
 python3 -m pip install gunicorn 
-
-
 echo "Python Env finishes"
 
+#Step 3: Check the work of python3 and the database
 python3 manage.py makemigrations
 python3 manage.py migrate
 
 echo "Migrations done"
 
-
+#Step 4: Install Nginx and copy the configuration 
 python --version
 python -m gunicorn --version
 cd /var/lib/jenkins/workspace/Django/scripts
@@ -43,13 +43,12 @@ which gunicorn
 sudo cp -rf gunicorn.service /etc/systemd/system
 chmod +x gunicorn.service
 
+#Step 5: Start Gunicorn and Nginx, also set up some stuff 
 echo "$USER"
 sudo systemctl daemon-reload
 sudo systemctl start gunicorn.service
 sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
-
-
 
 sudo systemctl status gunicorn
 echo "Gunicorn has been started"
@@ -76,5 +75,5 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 
 echo "Nginx has been started"
-
+echo "Let's check the web ?"
 
