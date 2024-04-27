@@ -71,6 +71,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 
+sudo yum install policycoreutils-python -y
 sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
 semodule -i mynginx.pp
 sudo semanage permissive -a httpd_t
