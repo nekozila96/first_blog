@@ -65,12 +65,17 @@ nginx -t
 sudo sed -i 's/^SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
 touch /var/run/nginx.pid
 sudo chown -R nginx:nginx /var/run/nginx.pid
-deactivate
+
 sudo systemctl daemon-reload
 sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
+semodule -i mynginx.pp
+sudo semanage permissive -a httpd_t
+
+deactivate
 echo "Nginx has been started"
 echo "Let's check the web ?"
 
