@@ -11,7 +11,8 @@ pipeline{
                '''
 	    }
         }
-        stage('Setup Python Virtual ENV'){
+
+        stage('Check Python Version'){
 	    steps  {
            sh '''
             cd /var/lib/jenkins/workspace/Django/scripts
